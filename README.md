@@ -71,3 +71,20 @@ Choose one of the following options:
 - Publish your project to gh-pages. `npm run deploy`. It should now be visible at http://username.github.io/repo-name
 - Create a [pull request](https://help.github.com/articles/creating-a-pull-request/) to this repository, and in the comment, include a link to your published project.
 - Submit the link to your pull request on Canvas.
+
+## Jackie Li Submission
+
+Live Demo link: 
+
+My project is a fireball that I plan to add on that honestly resembles more of a melting lava ball than an actual fireball. I struggled a lot with the fbm deformations on the vertex shader of the fireballs, but in the end, I simply decided to use an fbm function that samples from worley noise. Then, I modified the modelposition with a YOffset function that samples from a simplex noise function that I modified. I then bias the snoise function on the y axis to achieve some extremely spiky/melting effects, which I hope I optimise more in the future. 
+
+In the fragment shader, I used a combination of perlin noise, worley noise, and fbm to compute the patterns on the object. I then use a triangleWave function to compute a colour. In the main shader, after computing the diffuseColour, I use a glow and a specular term to modify the lambert shader, effectively giving the object the glow of a fire/magma ball. 
+
+The four parametres that can be modified are frequency (of some of the noise functions, especially in the vertex shader), amplitude (of some of the noise functions), glow (for specular intensity), and the ambient term of the lambert shader. 
+
+Here are some photos of my shader:
+![](ballOfFire.png)
+
+![](ballOfFire2.png)
+
+![](fireBall2.png)

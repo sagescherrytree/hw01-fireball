@@ -22,11 +22,11 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['.ts', '.js' ],
+    extensions: ['.ts', '.js'],
   },
   devtool: 'source-map',
   devServer: {
-    port: 5660,
+    port: 7000,
     static: {
       directory: path.join(__dirname, 'dist'),
     },
